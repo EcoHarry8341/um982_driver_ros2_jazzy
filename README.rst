@@ -37,7 +37,20 @@ pip3 install pyserial
 # 安装 ROS 消息依赖
 sudo apt update
 sudo apt install ros-jazzy-nmea-msgs ros-jazzy-geographic-msgs
+
 ```
+### 1.5 配置串口权限与别名 (关键步骤)
+由于 Launch 文件默认使用 `/dev/rtk` 作为设备名，你需要配置 udev 规则来创建别名并授予权限。
+
+**方法 A：一键脚本 (推荐)**
+在终端执行以下命令，将检测到的第一个 USB 串口映射为 `/dev/rtk`：
+```bash
+# 这行命令会创建一个规则：把所有 ttyUSB 设备都赋予 777 权限，并建立 /dev/rtk 软链接
+echo 'KERNEL=="ttyUSB*", MODE:="0777", SYMLINK+="rtk"' | sudo tee /etc/udev/rules.d/99-um982.rules
+
+#以此重载规则，插拔 USB 后生效
+sudo udevadm control --reload-rules && sudo udevadm trigger
+
 
 ### 2. 下载源码
 创建工作空间并 clone 本仓库：
