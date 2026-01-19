@@ -44,7 +44,7 @@ sudo apt install ros-jazzy-nmea-msgs ros-jazzy-geographic-msgs
 ```bash
 mkdir -p ~/rtk_ws/src
 cd ~/rtk_ws/src
-git clone [https://github.com/](https://github.com/)<你的用户名>/um982_driver_ros2_jazzy.git
+git clone https://github.com/！！！username！！！/um982_driver_ros2_jazzy.git
 ```
 
 ### 3. 编译
