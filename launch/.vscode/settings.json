@@ -1,0 +1,13 @@
+{
+    "ROS2.distro": "jazzy",
+    "python.autoComplete.extraPaths": [
+        "/home/cat/rtk_ws/build/nmea_navsat_driver/src",
+        "/home/cat/rtk_ws/install/nmea_navsat_driver/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/cat/rtk_ws/build/nmea_navsat_driver/src",
+        "/home/cat/rtk_ws/install/nmea_navsat_driver/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ]
+}
