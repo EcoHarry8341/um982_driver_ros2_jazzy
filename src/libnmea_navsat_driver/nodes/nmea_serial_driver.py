@@ -72,6 +72,9 @@ def main(args=None):
         try:
             while rclpy.ok():
                 data = GPS.readline().strip()
+                #数据窃听
+                driver.get_logger().info(f"[RAW]: {data.decode('utf-8', errors='ignore')}")
+
                 try:
                     if isinstance(data, bytes):
                         data = data.decode("utf-8")
